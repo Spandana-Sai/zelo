@@ -1,0 +1,14 @@
+# Public: Method that generate random 
+# string with given name.
+#
+# name - string
+#
+# Returns string
+def perform(name='world')
+ reg = /^[A-z .]+$/
+ if reg.match(name)
+  "#{name.strip} #{rand(6..15)}"
+ else
+  'Please enter valid name'
+ end
+end
